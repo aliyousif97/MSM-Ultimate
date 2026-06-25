@@ -70,8 +70,8 @@ Cleaned & Organized (Single-File Mode)
         .search-box input { width: 100%; padding: 12px 20px 12px 45px; border: 2px solid var(--gray-light); border-radius: 10px; font-size: 16px; transition: border 0.3s; }
         .search-box i { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--gray); }
         .search-box input:focus { outline: none; border-color: var(--primary); }
-        .table-container { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); overflow-x: auto; }
-        .data-table { width: 100%; border-collapse: collapse; min-width: 800px; }
+        .table-container { background:white; border-radius:15px; box-shadow:0 5px 15px rgba(0,0,0,0.05); overflow-x:auto; overflow-y:hidden; -webkit-overflow-scrolling:touch; width:100%; }
+        .data-table { width:100%; border-collapse:collapse; min-width:950px; }
         .data-table th { background: #f1f5f9; padding: 15px; text-align: left; font-weight: 600; color: var(--dark); border-bottom: 2px solid var(--gray-light); white-space: nowrap; }
         .data-table td { padding: 15px; border-bottom: 1px solid var(--gray-light); vertical-align: middle; }
         .data-table tr:hover { background: #f8fafc; }
@@ -292,12 +292,7 @@ Cleaned & Organized (Single-File Mode)
             .nav-item { flex-shrink: 0; border-left: none; border-bottom: 3px solid transparent; padding: 10px 15px; }
             .nav-item.active { border-bottom-color: var(--primary); }
             .nav-footer { display: none; }
-            .stats-cards { grid-template-columns: repeat(2, 1fr); }
-            .data-table th:nth-child(2), /* Hide Day column on medium screens */
-            .data-table td:nth-child(2) {
-                display: none;
-            }
-        }
+            .stats-cards { grid-template-columns: repeat(2, 1fr); }}
 
         @media (max-width: 768px) {
             .top-nav { padding: 15px; flex-direction: column; gap: 10px; }
@@ -310,12 +305,7 @@ Cleaned & Organized (Single-File Mode)
             .form-buttons { flex-direction: column; }
             .btn { width: 100%; justify-content: center; }
             .modal-content { padding: 20px; }
-            .planning-inputs { grid-template-columns: 1fr; }
-            .data-table th:nth-child(3), /* Hide Product on small screens */
-            .data-table td:nth-child(3) {
-                display: none;
-            }
-            .report-options {
+            .planning-inputs { grid-template-columns: 1fr; }.report-options {
                 flex-direction: column;
                 align-items: stretch;
             }
